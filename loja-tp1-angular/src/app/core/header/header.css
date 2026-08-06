@@ -1,0 +1,23 @@
+header{
+    background-color: white;
+    background: linear-gradient(90deg,
+    rgb(255, 255, 255)0,
+    rgb(1, 182, 1)50%,
+    rgb(255, 255, 255)100%);
+    text-align: center;
+    padding: 15px;
+}
+
+header nav a{
+    color: white;
+    margin:  0 10px;
+    text-decoration: none;
+}
+
+header img{
+    float: left;
+    position: absolute;
+    left: 0;
+    padding-left: 10px;
+    height: 100px;
+}
