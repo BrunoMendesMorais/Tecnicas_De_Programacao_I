@@ -5,7 +5,7 @@ header{
     rgb(1, 182, 1)50%,
     rgb(255, 255, 255)100%);
     text-align: center;
-    padding: 15px;
+    padding: 30px;
 }
 
 header nav a{
@@ -19,5 +19,6 @@ header img{
     position: absolute;
     left: 0;
     padding-left: 10px;
-    height: 100px;
+    height: 70px;
 }
+
