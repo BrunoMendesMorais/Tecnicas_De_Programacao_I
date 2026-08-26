@@ -1,4 +1,4 @@
-# PROGRAMAÇÃO ORIENTADA A OBJETOS - JAVA
+# Tecnicas_De_Programacao_I - Angular
 Este Repositório foi desenvolvido para a disciplina de Técnicas de programação I, com o objetivo de Programar em uma linguagem orientada a objetos e usar uma biblioteca de apresentação de dados (front-end)
 
 Aqui se encontram todos os projetos desenvolvidos e sugeridos ao decorrer da matéria
