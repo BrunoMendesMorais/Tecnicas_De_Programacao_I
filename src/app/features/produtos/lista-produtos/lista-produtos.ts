@@ -16,7 +16,8 @@ export class ListaProdutos {
       preco: 1699.99,
       descricao: 'gravidade',
       imageUrl: "images/maca.png",
-      promo: false
+      promo: false,
+      estado: 'usado'
     },
     {
       id: 1,
@@ -24,7 +25,8 @@ export class ListaProdutos {
       preco: 1699.99,
       descricao: 'cor ou fruta??',
       imageUrl: "images/laranja.png",
-      promo: false
+      promo: false,
+      estado: 'esgotado'
     },
     {
       id: 1,
@@ -32,7 +34,8 @@ export class ListaProdutos {
       preco: 1699.99,
       descricao: 'stop',
       imageUrl: "images/pera-ai.png",
-      promo: true
+      promo: true,
+      estado: 'novo'
     }
   ]
 

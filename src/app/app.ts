@@ -18,6 +18,8 @@ export class App {
   protected readonly title = signal('Loja TP1 Angular');
   sobre?:string;
 
+  x = signal(101);
+
   produto = <Produto>{
     id: 1,
     nome: 'maça',
