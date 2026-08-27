@@ -12,6 +12,9 @@
                     <span class="selo esgotado">Esgotado</span>
                 }
             }
+            @if (produto().promo) {
+                <span class="selo promo">Aproveite</span>
+            }
         </header>
         <h3 class="titulo">{{this.produto().nome}}</h3>
         <p class="desc">{{this.produto().descricao}}</p>
