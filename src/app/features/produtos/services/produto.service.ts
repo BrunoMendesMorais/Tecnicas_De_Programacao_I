@@ -46,4 +46,8 @@ export class ProdutoService {
       delay(250)
     );
   }
+  getNumberOfCurrencyDigits(id: Number): Observable<Produto | undefined >{
+    return of(this.listaMock.find(p=> p.id == id)).pipe(delay(500));
+  }
+  
 }
