@@ -27,9 +27,13 @@ export class ProdutoService {
     )
   }
 
-  getById(id: number): Observable<Produto | undefined>{
-    return of();
-  }
+getById(id: number): Observable<Produto | undefined> {
+    return this.http
+        .get<any>(`${this.apiUrl}/${id}`)
+        .pipe(
+            map(json => ProductMapper.fromJson(json))
+        );
+}
 
   criar(produto: Produto):Observable<any>{
     return this.http.post(this.apiUrl,ProductMapper.toJson)

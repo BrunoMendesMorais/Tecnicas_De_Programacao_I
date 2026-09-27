@@ -26,6 +26,7 @@ export class CardProduto {
   }
 
   onView(){
+    this.produto
     this.view.emit(this.produto().id);
   }
 
