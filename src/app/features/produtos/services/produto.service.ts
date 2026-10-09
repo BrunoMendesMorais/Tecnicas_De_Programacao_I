@@ -13,9 +13,6 @@ export class ProdutoService {
 
   private apiUrl = 'https://fakestoreapi.com/products';
 
-  private readonly listaMock = <Produto[]>[
-];
-
   listar(): Observable<Produto[]>{
     this.logger.info("PRODUTO SERVICE - retornando lista de produto");
     return this.http.get<any[]>(this.apiUrl).pipe(
@@ -27,15 +24,22 @@ export class ProdutoService {
     )
   }
 
-getById(id: number): Observable<Produto | undefined> {
-    return this.http
-        .get<any>(`${this.apiUrl}/${id}`)
-        .pipe(
-            map(json => ProductMapper.fromJson(json))
-        );
-}
+  getById(id: number): Observable<Produto | undefined>{
+    if (!Number.isInteger(id) || id <= 0) {
+      return of(undefined);
+    }
 
-  criar(produto: Produto):Observable<any>{
-    return this.http.post(this.apiUrl,ProductMapper.toJson)
+    return this.http.get<any>(`${this.apiUrl}/${id}`).pipe(
+      map(produto => ProductMapper.fromJson(produto)),
+      catchError(erro => {
+        this.logger.error(`[PRODUTO SERVICE] - Erro ao buscar produto ${id}`);
+        return of(undefined);
+      })
+    );
+  }
+
+
+  criar(produto: Produto): Observable<any> {
+    return this.http.post(this.apiUrl,ProductMapper.toJson(produto));
   }
 }

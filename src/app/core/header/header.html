@@ -1,10 +1,14 @@
 <header class="header">
-    <img src="/images/logoifsp.png">
+    <img src="/images/logoifsp.png" routerLink="/">
     <h1>{{tituloLoja()}}</h1>
 
     <nav>
         <a routerLink="/">Home</a>
         <a routerLink="/produtos">Produtos</a>
         <a routerLink="/sobre">Sobre</a>
+        <a routerLink="/carrinho" class="cart-wrapper">
+            <span class="cart-icon">🛒</span>
+            <span class="badge">{{qtdCarrinho()}}</span>
+        </a>
     </nav>
 </header>

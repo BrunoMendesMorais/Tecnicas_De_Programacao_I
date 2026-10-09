@@ -6,10 +6,10 @@ import { Sobre } from './features/sobre/sobre';
 import { ProdutoForm } from './features/produtos/produto-form/produto-form';
 
 export const routes: Routes = [ 
-    {path: '', component: Home},
+   {path: '', component: Home},
     {path: 'produtos', component: ListaProdutos},
+    {path: 'produtos/novo', component: ProdutoForm},
     {path: 'produtos/:id', component: ProdutoDetalhe},
     {path: 'sobre', component:Sobre},
-    {path: 'novo', component:ProdutoForm},
     {path: '**', redirectTo: ''}
 ];
